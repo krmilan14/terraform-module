@@ -9,7 +9,7 @@ This module provisions an Amazon Aurora RDS cluster using Terraform. Below is an
 
 ```hcl
 module "aurora_rds" {
-  source                 = "/home/milan-kumar/Desktop/Challenge/module/aurora"
+  source                 = "https://github.com/krmilan14/terraform-module/tree/main/aurora"
   cluster_identifier     = "my-aurora-cluster"
   engine_version         = "8.0.mysql_aurora.3.05.2"
   master_username        = "admin"
