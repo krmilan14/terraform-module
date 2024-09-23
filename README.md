@@ -1,7 +1,14 @@
 # terraform-module
 
 Usage For Aurora
-  module "aurora_rds" {
+  # Aurora RDS Module
+
+This module provisions an Amazon Aurora RDS cluster using Terraform. Below is an example configuration for setting up the Aurora RDS with the specified parameters.
+
+## Usage
+
+```hcl
+module "aurora_rds" {
   source                 = "/home/milan-kumar/Desktop/Challenge/module/aurora"
   cluster_identifier     = "my-aurora-cluster"
   engine_version         = "8.0.mysql_aurora.3.05.2"
@@ -19,10 +26,3 @@ Usage For Aurora
   }
 }
 
-output "cluster_endpoint" {
-  value = module.aurora_rds.cluster_endpoint
-}
-
-output "reader_endpoint" {
-  value = module.aurora_rds.reader_endpoint
-}
